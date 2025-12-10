@@ -1,0 +1,180 @@
+
+/* Baggrund på hele siden */
+body{
+    background-color: #D2C1B7;
+}
+
+/* Nulstil margin/padding */
+html, body { margin: 0; padding: 0; }
+
+/* Gør navbar-baggrund hvid */
+nav.navbar { background: #fff; }
+
+/* Farve-variabler */
+:root{
+    --bg: #ffffff;
+    --accent: #4f1313;   /* mørk rød */
+    --muted: #777777;
+    --line: #dcd6d3;
+    --cart: #666;
+}
+
+/* NAVBAR wrapper */
+.navbar {
+    background: var(--bg);
+    border-top: 9px solid transparent;
+    border-bottom: 1px solid var(--line);
+    padding: 18px 28px;
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   LAYOUT: 3 separate bokse
+   Logo | Menu (midten) | Cart
+   ------------------------------ */
+
+/* Container: holder 3 separate bokse */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo venstre, menu midten, cart højre */
+    width: 100%;
+    gap: 40px; /* afstand mellem boksene (justér efter behov) */
+
+
+}
+
+/* ---------- LOGO (separat boks) ---------- */
+.navbar-brand {
+    flex: 0 0 auto;               /* fylder kun sin egen størrelse */
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    color: var(--accent);
+    text-decoration: none;
+    line-height: 1;
+    margin: 0;                    /* justér hvis du vil have luft omkring */
+    white-space: nowrap;
+    font-weight: bolder;
+}
+
+/* ---------- MENU (separat boks, centreret) ---------- */
+.navbar-nav {
+    display: flex;
+    flex: 1 1 auto;               /* menu fylder midten */
+    justify-content: center;      /* centrer links i deres boks */
+    gap: 40px;                    /* afstand mellem links (justér) */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu items */
+.navbar-nav .nav-item {
+    position: relative;
+    display: inline-block;
+}
+
+/* Links styling */
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 6px 8px;
+    display: inline-block;
+    transition: color .15s ease;
+    letter-spacing: 0.2px;
+}
+
+/* Hover og aktiv farve */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
+
+/* Underline effekt */
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 52%;
+    background: var(--accent);
+    margin: 6px auto 0;
+    border-radius: 2px;
+    transition: width .18s ease;
+}
+
+/* ---------- DROPDOWN ---------- */
+.navbar-nav .dropdown {
+    cursor: pointer;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 12px);
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(20,20,20,0.06);
+    padding: 8px 0;
+    min-width: 180px;
+    display: none;
+    border-radius: 6px;
+    z-index: 40;
+}
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.navbar-nav .dropdown-menu a {
+    display: block;
+    padding: 8px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* ---------- CART (separat boks) ---------- */
+.navbar .cart-wrap {
+    flex: 0 0 auto;               /* fylder kun sin egen størrelse */
+    border-left: 1px solid var(--line);
+    margin-left: 18px;
+    padding-left: 18px;
+    display: flex;
+    align-items: center;
+}
+.navbar .cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cart);
+    font-size: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .navbar .container { gap: 14px; padding: 12px; }
+    .navbar-brand { font-size: 28px; }
+    .navbar-nav { gap: 18px; }
+    .navbar-nav .nav-link { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+    /* På små skærme stables bokse lodret */
+    .navbar .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    /* Menu: gør links centrerede men på flere rækker */
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    .navbar .cart-wrap { margin-left: 0; padding-left: 0; border-left: none; }
+
+}
+
+/* ------------ Slut på CSS ------------- */
