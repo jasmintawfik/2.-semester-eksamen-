@@ -65,37 +65,4 @@ body{
     margin-left: 110px;
 }
 
-.footer {
-    background-color: #ffffff;
-    padding: 20px 40px;
-    border-top: 1px solid #ddd;
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer-text {
-    text-align: center;
-    width: 100%;
-    font-size: 14px;
-    color: #000;
-}
-
-.footer-link {
-    color: #000;
-    text-decoration: underline;
-}
-
-.footer-icons {
-    display: flex;
-    gap: 16px;
-}
-
-.footer-icons img {
-    width: 40px;
-    height:40px;
-}
 
