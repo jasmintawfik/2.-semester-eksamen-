@@ -7,21 +7,16 @@ body{
 
 .overskrift{
    color: #4f1313;
-    font-family:  serif;
-    font-size: 50px;
+    font-size: 56px;
     font-weight: bold;
     margin-left: 120px;
     margin-top: 90px;
-
-
-
 }
+
 .paragraph {
-    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 1.6;   /* gør teksten lang og luftig */
     font-weight: 400;   /* normal tykkelse */
-    max-width: 420px;   /* gør teksten lang i linjerne */
     margin-bottom: 20px;
     text-align: left;
     margin-left: 120px;
@@ -38,6 +33,29 @@ body{
     color: #4f1313;
 }
 
+/* Container for tekst + billede */
+.informationside .content {
+    display: flex;
+    gap: 30px;             /* afstand mellem tekst og billede */
+    align-items: flex-start;
+}
+
+/* Tekstblok fylder den resterende plads */
+.info {
+    flex: 1;
+}
+
+/* Billedeblok holder sin egen størrelse */
+.billedejuletræ-højreside {
+    flex-shrink: 0;
+}
+
+.billedejuletræ-højreside img {
+    width: 600px;
+    margin-right: 60px;
+    margin-top: 60px;
+    height: auto;
+}
 
 /* Nulstil margin/padding */
 html, body { margin: 0; padding: 0; }
@@ -217,3 +235,4 @@ nav.navbar { background: #fff; }
     margin-left: 10px;
     font-size: 18px;
 }
+
