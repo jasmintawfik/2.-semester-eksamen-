@@ -1,6 +1,3 @@
-
-
-
 .wrapper {
     position: relative;
     padding: 20px;        /* synlig kant hvor billedet ses */
@@ -33,7 +30,6 @@
     z-index: 1;           /* ← dette gør teksten synlig ovenpå billedet */
 }
 .backdrop {
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
