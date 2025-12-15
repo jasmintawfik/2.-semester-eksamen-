@@ -4,6 +4,40 @@ body{
     background-color: #D2C1B7;
 }
 
+.overskrift{
+   color: #4f1313;
+    font-family:  serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 90px;
+
+
+
+}
+.paragraph {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;   /* gør teksten lang og luftig */
+    font-weight: 400;   /* normal tykkelse */
+    max-width: 420px;   /* gør teksten lang i linjerne */
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 120px;
+    color: #4f1313;
+}
+.tyk{
+    font-weight: bolder;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;   /* gør teksten lang og luftig */
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 120px;
+    color: #4f1313;
+}
+
+
 /* Nulstil margin/padding */
 html, body { margin: 0; padding: 0; }
 
@@ -177,4 +211,4 @@ nav.navbar { background: #fff; }
 
 }
 
-/* ------------ Slut på CSS ------------- */
+
