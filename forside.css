@@ -45,7 +45,6 @@ body{
     padding: 12px 30px;
     border-radius: 30px;
     margin-left: 260px;
-    text-decoration:
 }
 
 .billeder-højreside{
@@ -60,6 +59,15 @@ body{
     position: absolute;
     bottom: -290px;
     right: 120px;
+}
+
+.hyggebillede{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-left: 100px;
+
 }
 
 
