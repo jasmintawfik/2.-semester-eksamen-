@@ -72,18 +72,25 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+.reservation-titel {
+    font-size: 42px;
+    font-family: "Open Sans", sans-serif;
+    color: #5E0005;
+    text-align: center;
+
+}
 .reservation-form {
-    width: 400px;
-    margin: 40px auto;
+    width: 500px;
+  margin-top: -50px;
 }
 
 .input-boks {
     background-color: #D2C1B7;
     border: 3px solid #5E0005;
     border-radius: 50px;
-    padding: 22px 35px;
+    padding: 22px 10px;
     margin-bottom: 28px;
-    font-size: 22px;
+    font-size: 18px;
     color: #5E0005;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
@@ -112,3 +119,19 @@ body {
     color: #000;
     font-size: 14px;
 }
+
+.trykpåmig {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    background-color: #2F3824;
+    color: white;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+
+
+}
+
