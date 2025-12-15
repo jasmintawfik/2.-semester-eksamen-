@@ -5,7 +5,10 @@
     overflow: hidden;     /* klipper hjørnerne */
     height: 810px;   /* gør hele området længere */
     width: 500px;
+}
 
+body{
+    font-family: "Open Sans";
 }
 
 /* billedet fra HTML - ligger bagved */
