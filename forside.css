@@ -55,11 +55,6 @@ body{
     margin-right: 20px;
 }
 
-.Julekugler img{
-    position: absolute;
-    bottom: -290px;
-    right: 120px;
-}
 
 .hyggebillede{
     display: flex;
@@ -71,3 +66,7 @@ body{
 }
 
 
+.Spil{
+    border-radius: 30px;
+
+}
