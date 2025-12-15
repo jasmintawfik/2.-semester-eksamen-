@@ -7,7 +7,6 @@ body{
 
 .overskrift{
    color: #4f1313;
-    font-family:  serif;
     font-size: 50px;
     font-weight: bold;
     margin-left: 120px;
@@ -17,7 +16,6 @@ body{
 
 }
 .paragraph {
-    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 1.6;   /* gør teksten lang og luftig */
     font-weight: 400;   /* normal tykkelse */
@@ -217,3 +215,4 @@ nav.navbar { background: #fff; }
     margin-left: 10px;
     font-size: 18px;
 }
+
