@@ -62,15 +62,18 @@ body {
     color: #4f1313;
 }
 
-.læsmere-CTA {
+
+.læsmere-CTA{
     display: inline-block;
-    background-color: #2F3824;
-    color: white;
-    font-size: 18px;
     padding: 12px 30px;
     border-radius: 30px;
-    margin-left: 260px;
-    text-decoration: none;
+    background-color: #2f3b1f; /* mørkegrøn */
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 18px;
+    font-family: "Open Sans";
+    margin-left: 300px;
+    margin-top: 30px;
 }
 
 /* ===== RESERVATION ===== */
@@ -121,6 +124,7 @@ body {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 /* ===== FOOTER ===== */
