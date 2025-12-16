@@ -101,7 +101,7 @@
                     Vi glæder os til at se dig.
                 </p>
 
-                <a href="menukort.html" class="menu-CTA">Se menukort</a>
+
 
             </div>
 
@@ -118,6 +118,9 @@
 <nav>
 </nav>
 
+
+
+
 <script type="module" src="app.js"></script>
 
 
@@ -131,6 +134,55 @@
     </div>
 
 </footer>
+
+
+<button class="open-menu-btn" onclick="openMenu()">Se menukort</button>
+<div class="modal" id="menuModal">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal-box">
+        <iframe src="menukort.html" width="100%" height="500"></iframe>
+        <button onclick="closeMenu()">Luk</button>
+
+
+    </div>
+</div>
+
+<script>
+    function openMenu() {
+        document.getElementById("menuModal").style.display = "flex";
+    }
+
+    function closeMenu() {
+        document.getElementById("menuModal").style.display = "none";
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
