@@ -1,28 +1,29 @@
+/* Wrapper der indeholder både baggrundsbillede og menuboks */
 .wrapper {
-    position: relative;
-    padding: 20px;        /* synlig kant hvor billedet ses */
+    position: relative;     /* gør det muligt at placere billede absolut */
+    padding: 20px;          /* kant så baggrundsbilledet kan ses */
     border-radius: 5px;
-    overflow: hidden;     /* klipper hjørnerne */
-    height: 810px;   /* gør hele området længere */
+    overflow: hidden;       /* klipper hjørnerne */
+    height: 810px;
     width: 500px;
 }
 
+/* Grundfont på siden */
 body{
     font-family: "Open Sans";
 }
 
-/* billedet fra HTML - ligger bagved */
+/* Baggrundsbillede – ligger bag teksten */
 .hey {
     position: absolute;
-    inset: 0;             /* top:0; right:0; bottom:0; left:0; */
+    inset: 0;               /* fylder hele wrapperen */
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: 0;
-
+    object-fit: cover;      /* beskærer billedet pænt */
+    z-index: 0;             /* ligger nederst */
 }
 
-/* den lyse boks ovenpå */
+/* Den lyse boks ovenpå baggrundsbilledet */
 .box {
     position: relative;
     background: #D2C1B7;
@@ -30,22 +31,24 @@ body{
     padding: 28px;
     height: 755px;
     width: 440px;
-    z-index: 1;           /* ← dette gør teksten synlig ovenpå billedet */
+    z-index: 1;             /* gør at boksen ligger over billedet */
 }
+
+/* Grå baggrund bag hele menukortet */
 .backdrop {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #C6C7C6;
-    backdrop-filter: blur(3px); /* sløring bagved */
-    z-index: 999; /* ligger øverst */
+    backdrop-filter: blur(3px); /* slører baggrunden */
+    z-index: 999;
     padding: 100px;
     border-radius: 20px;
     width: 70%;
     margin-left: 40px;
 }
 
-/* Titel skrifttyper */
+/* Lille titel (Jule) */
 .title-small {
     font-family: Georgia, serif;
     font-style: italic;
@@ -57,6 +60,7 @@ body{
     margin-right: 100px;
 }
 
+/* Stor titel (Menukort) */
 .title-big {
     font-family: Arial, sans-serif;
     font-weight: bold;
@@ -67,7 +71,7 @@ body{
     margin-left: 150px;
 }
 
-/* Sektionstitler (Snacks / Drikkevarer) */
+/* Overskrifter for sektioner */
 .section-title {
     text-align: center;
     font-style: italic;
@@ -76,29 +80,29 @@ body{
     margin: 30px 0 10px;
 }
 
-/* Menu items: navn + pris + streg */
+/* Hvert menupunkt (navn + pris) */
 .menu-item {
-    display: flex;
+    display: flex;                  /* navn og pris på samme linje */
     justify-content: space-between;
     padding: 16px 0;
     border-bottom: 2px solid rgba(0,0,0,0.25);
     font-size: 20px;
 }
 
+/* Fjerner stregen på sidste punkt */
 .menu-item:last-of-type {
     border-bottom: none;
 }
 
-/* Navnet til venstre (understregning) */
+/* Navn på menu-item */
 .menu-item .name {
     color: #6a1f1f;
     text-decoration: underline;
     text-underline-offset: 6px;
 }
 
-/* Prisen til højre */
+/* Pris på menu-item */
 .menu-item .price {
     color: #444;
     font-style: italic;
 }
-

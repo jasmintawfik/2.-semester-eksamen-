@@ -1,57 +1,105 @@
 <!DOCTYPE html>
+<!-- Angiver dokumenttypen som HTML5 -->
 <html lang="da">
 <head>
+    <!-- Korrekt tegnsæt (æ, ø, å) -->
     <meta charset="UTF-8">
+
+    <!-- Titel i browser-fanen -->
     <title>Menukort</title>
+
+    <!-- Link til CSS-filen for menukort -->
     <link rel="stylesheet" href="menukort.css">
+
+    <!-- Google Font: Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<!-- Tilbage-navigation -->
 <div class="navigationvenstre">
     <a href="forside.html"><- Tilbage til forsiden</a>
 </div>
 
+<!-- Main-indhold (semantisk HTML) -->
 <main class="backdrop">
+
+    <!-- Wrapper som holder baggrundsbillede og menu-boks -->
     <section class="wrapper">
 
+        <!-- Baggrundsbillede (ligger bag boksen via CSS) -->
         <img src="baggrundsbilede.png" class="hey" alt="baggrund">
 
+        <!-- Selve menukort-boksen -->
         <article class="box menu-box">
 
+            <!-- Titelområde -->
             <header class="text-center mb-3">
                 <span class="title-small">Jule</span>
                 <span class="title-big">Menukort</span>
             </header>
 
+            <!-- Snacks-sektion -->
             <section>
                 <h2 class="section-title">Snacks</h2>
 
+                <!-- Liste med menu-items -->
                 <ul>
-                    <li class="menu-item"><span class="name">3 stk. æbleskiver</span><span class="price">30,-</span></li>
-                    <li class="menu-item"><span class="name">Skål med vaniljekranse</span><span class="price">20,-</span></li>
-                    <li class="menu-item"><span class="name">Honninghjerte</span><span class="price">30,-</span></li>
-                    <li class="menu-item"><span class="name">Julekonfekt</span><span class="price">15,-</span></li>
-                    <li class="menu-item"><span class="name">Brændte mandler</span><span class="price">15,-</span></li>
+                    <li class="menu-item">
+                        <span class="name">3 stk. æbleskiver</span>
+                        <span class="price">30,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Skål med vaniljekranse</span>
+                        <span class="price">20,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Honninghjerte</span>
+                        <span class="price">30,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Julekonfekt</span>
+                        <span class="price">15,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Brændte mandler</span>
+                        <span class="price">15,-</span>
+                    </li>
                 </ul>
             </section>
 
+            <!-- Drikkevarer-sektion -->
             <section>
                 <h2 class="section-title mt-4">Drikkevarer</h2>
 
                 <ul>
-                    <li class="menu-item"><span class="name">Gløgg</span><span class="price">20,-</span></li>
-                    <li class="menu-item"><span class="name">Alkoholfri gløgg</span><span class="price">20,-</span></li>
-                    <li class="menu-item"><span class="name">En flaske kildevand</span><span class="price">10,-</span></li>
-                    <li class="menu-item"><span class="name">Sodavand 33 cl.</span><span class="price">15,-</span></li>
-                    <li class="menu-item"><span class="name">Kaffe/The</span><span class="price">25,-</span></li>
+                    <li class="menu-item">
+                        <span class="name">Gløgg</span>
+                        <span class="price">20,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Alkoholfri gløgg</span>
+                        <span class="price">20,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">En flaske kildevand</span>
+                        <span class="price">10,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Sodavand 33 cl.</span>
+                        <span class="price">15,-</span>
+                    </li>
+                    <li class="menu-item">
+                        <span class="name">Kaffe/The</span>
+                        <span class="price">25,-</span>
+                    </li>
                 </ul>
             </section>
 
         </article>
 
     </section>
-
 </main>
 
 </body>

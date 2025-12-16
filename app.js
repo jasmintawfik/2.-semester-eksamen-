@@ -1,8 +1,14 @@
+// Importerer funktionen emojiCursor fra et eksternt JavaScript-modul (ES module)
+// Modulet hentes fra unpkg, som er et CDN
 import { emojiCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
 
-    window.addEventListener('load', () => {
+// Lytter efter når hele siden er færdigindlæst
+window.addEventListener('load', () => {
+
+    // Aktiverer emoji-cursor effekten
     emojiCursor({
-        emoji: ["❄️"],  // Snefnug styles
-        particleCount: 20,
+        emoji: ["❄️"],        // Bestemmer hvilken emoji der vises ved cursoren
+        particleCount: 20,   // Antal emojis der genereres ad gangen
     });
+
 });
