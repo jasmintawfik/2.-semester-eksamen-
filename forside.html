@@ -2,158 +2,151 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Our Place – Brætspilscafé</title>
 
-  <link rel="stylesheet" href="information.css">
+    <link rel="stylesheet" href="information.css">
     <link rel="stylesheet" href="forside.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+<div class="page-wrapper">
 
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <div class="container">
 
-<!-- dette er fra chat som har samsat en bootstrap kode til os  -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
-    <div class="container">
+            <a class="navbar-brand fs-3 fw-semibold" href="#">
+                Our Place – Brætspilscafé
+            </a>
 
-        <!-- Logo -->
-        <a class="navbar-brand fs-3 fw-semibold" href="#">
-            Our Place – Brætspilscafé
-        </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-center">
 
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Vores brætspilscafé</a>
+                    </li>
 
-        <!-- Menu -->
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fødselsdage, firmaevents mm.</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                        Vores brætspilscafé
-                    </a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menukort.html">Vores menukort</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Fødselsdage, firmaevents mm.
-                    </a>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            Vis mere
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Galleri</a></li>
+                            <li><a class="dropdown-item" href="#">Kontakt</a></li>
+                        </ul>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="menukort.html">
-                        Vores menukort
-                    </a>
-                </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="#">Indkøbskurv 🛒</a>
+                    </li>
 
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                        Vis mere
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Galleri</a></li>
-                        <li><a class="dropdown-item" href="#">Kontakt</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item ms-3">
-                    <a class="nav-link" href="#">
-                        Indkøbskurv 🛒
-                    </a>
-                </li>
-
-            </ul>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<div class="granitoppen">
-    <img src="gran.png" alt="Granpynt">
+    <!-- SIDEINDHOLD -->
+    <main class="page-content">
+
+        <div class="granitoppen">
+            <img src="gran.png" alt="Granpynt">
+        </div>
+
+        <!-- HERO 1 -->
+        <section class="hero">
+
+            <div class="venstre-side">
+                <div class="overskrifter-forside">
+                    <div class="linje1">Julearrangement</div>
+                    <div class="linje2">for seniorer</div>
+                </div>
+
+                <div class="brødtekst-forside">
+                    <p>
+                        Kom i ægte julestemning med gløgg, varme æbleskiver og hyggeligt samvær,
+                        som er særligt skabt til seniorer.
+                    </p>
+                    <p>
+                        Vi glæder os til at byde jer velkommen til en stemningsfuld
+                        juleoplevelse med brætspil!
+                    </p>
+                </div>
+
+                <a href="information.html" class="læsmere-CTA">Læs mere her</a>
+            </div>
+
+            <div class="billeder-højreside">
+                <img src="Herobillede.png" alt="Seniorer der spiller">
+            </div>
+
+        </section>
+
+        <!-- HERO 2 / RESERVATION -->
+        <section class="hero">
+
+            <div class="hyggebillede">
+                <img src="Spil.svg" alt="Hygge">
+            </div>
+
+            <form action="send.php" method="POST" class="reservation-form">
+
+                <h1 class="reservation-titel">Tilmeld dig her</h1>
+
+                <div class="input-boks">
+                    <input type="text" name="name" placeholder="Fulde navn" required>
+                </div>
+
+                <div class="input-boks">
+                    <input type="number" name="persons" placeholder="Antal personer" required>
+                </div>
+
+                <div class="input-boks">
+                    <input type="datetime-local" name="datetime" required>
+                </div>
+
+                <div class="input-boks">
+                    <input type="tel" name="phone" placeholder="Telefon nr" required>
+                </div>
+
+                <div class="input-boks">
+                    <input type="email" name="email" placeholder="E-mail adresse" required>
+                </div>
+
+                <button type="submit" class="trykpåmig">Reservér</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <span>© 2023 Alle rettigheder forbeholdes</span>
+
+            <div class="cookie-box">Cookies</div>
+
+            <div class="Some">
+                <img src="Instagram.svg" alt="Instagram">
+                <img src="Facebook.svg" alt="Facebook">
+            </div>
+
+        </div>
+    </footer>
+
 </div>
-
-<section class="hero">
-
-    <div class="venstre-side">
-        <div class="overskrifter-forside">
-            <div class="linje1">Julearrangement</div>
-            <div class="linje2">for seniorer</div>
-        </div>
-
-
-        <div class="brødtekst-forside">
-            <p>
-                Kom i ægte julestemning med gløgg, varme æbleskiver og hyggeligt samvær,
-                som er særligt skabt til seniorer, der ønsker en varm og hyggelig aften.
-            </p>
-            <p>
-                Vi glæder os til at byde jer velkommen til en stemningsfuld og afslappet
-                juleoplevelse med brætspil!
-            </p>
-        </div>
-
-        <a href="information.html" class="læsmere-CTA">Læs mere her</a>
-
-    </div>
-
-    <div class="billeder-højreside">
-
-        <div class="Billede-seniorer">
-            <img src="Herobillede.png" alt="Seniorer der spiller">
-        </div>
-
-    </div>
-</section>
-
-
-
-
-<section class="hero">
-
-<div class="hyggebillede">
-    <img src="Spil.svg" alt="hygge">
-</div>
-
-
-
-
-
-
-
-<div class="reservation-form">
-
-    <h1 class="reservation-titel">Tilmeld dig her</h1>
-
-    <div class="input-boks">Fulde navn: ……</div>
-    <div class="input-boks">Antal personer: ……</div>
-    <div class="input-boks">Dato og tid: ……</div>
-    <div class="input-boks">Telefon nr: ……</div>
-    <div class="input-boks">E-mail adresse: ……</div>
-
-    <a class="trykpåmig">Reservér</a>
-
-</div>
-</section>
-
-
-<footer class="footer">
-
-    <div class="footer-content">
-        <span>© 2023 Alle rettigheder forbeholdes</span>
-
-        <div class="cookie-box">
-            Cookies
-        </div>
-
-        <div class="Some">
-            <img src="Instagram.svg" alt="Instagram">
-    <img src="Facebook.svg" alt="Facebook ikon">
-    </div>
-
-
-    </div>
-
-
-
-
 
 </body>
 </html>
