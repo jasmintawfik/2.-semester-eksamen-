@@ -104,14 +104,15 @@ body {
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-between; /* venstre + højre */
+    align-items: center;            /* lodret centrering */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #000;
 }
-
 .cookie-box {
     background-color: #ffffff;
     padding: 8px 18px;
@@ -131,8 +132,11 @@ body {
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
+}
 
-
+.Some {
+    display: flex;
+    gap: 15px;
 }
 
 
