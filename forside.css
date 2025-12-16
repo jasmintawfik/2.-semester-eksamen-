@@ -82,7 +82,6 @@ body {
     color: #ffffff;
     text-decoration: underline;
     font-size: 18px;
-    font-family: "Open Sans";
     margin-left: 300px;
     margin-top: 30px;
 }
@@ -92,7 +91,10 @@ body {
 .reservation-form {
     width: 500px;
     margin: 60px auto;
+    display: flex;
+    flex-direction: column;
 }
+
 
 /* Formularens titel */
 .reservation-titel {

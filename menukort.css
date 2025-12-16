@@ -14,7 +14,7 @@ body{
 }
 
 /* Baggrundsbillede – ligger bag teksten */
-.hey {
+.baggrundsbillede {
     position: absolute;
     inset: 0;               /* fylder hele wrapperen */
     width: 100%;
