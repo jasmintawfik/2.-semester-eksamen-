@@ -1,38 +1,34 @@
 /* ===== RESET ===== */
-/* Fjerner browserens standard-margin og padding */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ===== PAGE SETUP (FOOTER FIX) ===== */
-/* Gør siden fuld højde */
+/* ===== PAGE SETUP ===== */
 html, body {
     height: 100%;
 }
 
-/* Grundstyling på body */
 body {
     background-color: #D2C1B7;
     font-family: "Open Sans", sans-serif;
 }
 
 /* Wrapper der sikrer footer i bunden */
-.page-wrapper {
+.side-wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 /* Gør main-indhold fleksibelt */
-.page-content {
+.side-indhold {
     flex: 1;
 }
 
 /* ===== HERO ===== */
-/* Layout for hero-sektioner */
-.hero {
+.hero-sektion {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -40,12 +36,12 @@ body {
 }
 
 /* Venstre tekstområde */
-.venstre-side {
+.venstre-kolonne {
     max-width: 500px;
 }
 
-/* Overskrifter samlet */
-.overskrifter-forside {
+/* Overskrifter */
+.forside-overskrifter {
     display: flex;
     flex-direction: column;
     color: #4f1313;
@@ -53,28 +49,26 @@ body {
     margin-bottom: 20px;
 }
 
-/* Første overskriftslinje */
-.linje1 {
+.overskrift-linje-1 {
     font-size: 56px;
     font-weight: bold;
 }
 
-/* Anden overskriftslinje */
-.linje2 {
+.overskrift-linje-2 {
     font-size: 45px;
     font-style: italic;
     margin-left: 220px;
 }
 
 /* Brødtekst */
-.brødtekst-forside {
+.forside-tekst {
     font-size: 20px;
     line-height: 1.6;
     color: #4f1313;
 }
 
-/* Call to action-knap */
-.læsmere-CTA{
+/* CTA-knap */
+.læs-mere-knap {
     display: inline-block;
     padding: 12px 30px;
     border-radius: 30px;
@@ -87,25 +81,22 @@ body {
 }
 
 /* ===== RESERVATION ===== */
-/* Formularens bredde og placering */
-.reservation-form {
+.reservations-formular {
     width: 500px;
     margin: 60px auto;
     display: flex;
     flex-direction: column;
 }
 
-
-/* Formularens titel */
-.reservation-titel {
+.reservations-titel {
     font-size: 42px;
     color: #5E0005;
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Wrapper omkring inputfelter */
-.input-boks {
+/* Input-wrapper */
+.input-wrapper {
     background-color: #D2C1B7;
     border: 3px solid #5E0005;
     border-radius: 50px;
@@ -116,8 +107,7 @@ body {
     align-items: center;
 }
 
-/* Selve inputfelterne */
-.input-boks input {
+.input-wrapper input {
     width: 100%;
     border: none;
     background: transparent;
@@ -126,13 +116,12 @@ body {
     outline: none;
 }
 
-/* Placeholder-tekst */
-.input-boks input::placeholder {
+.input-wrapper input::placeholder {
     color: #5E0005;
 }
 
 /* Submit-knap */
-.trykpåmig {
+.send-knap {
     display: block;
     margin: 40px auto 0;
     background-color: #2F3824;
@@ -146,14 +135,12 @@ body {
 }
 
 /* ===== FOOTER ===== */
-/* Footer-baggrund */
-.footer {
+.side-footer {
     background-color: #ffffff;
     padding: 20px 0;
 }
 
-/* Footer-indhold */
-.footer-content {
+.footer-indhold {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
@@ -165,8 +152,7 @@ body {
 }
 
 /* Sociale medier */
-.Some {
+.sociale-medier {
     display: flex;
     gap: 15px;
 }
-
