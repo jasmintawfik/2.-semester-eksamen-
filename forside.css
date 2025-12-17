@@ -1,93 +1,101 @@
 /* ===== RESET ===== */
+/* Nulstiller browserens standard-indstillinger */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Padding og border tælles med i elementets bredde/højde */
+    margin: 0;              /* Fjerner standard margin */
+    padding: 0;             /* Fjerner standard padding */
 }
 
 /* ===== PAGE SETUP ===== */
+/* Sørger for at siden kan fylde hele højden */
 html, body {
     height: 100%;
 }
 
+/* Grundlæggende styling af body */
 body {
-    background-color: #D2C1B7;
-    font-family: "Open Sans", sans-serif;
+    background-color: #D2C1B7;               /* Baggrundsfarve på siden */
+    font-family: "Open Sans", sans-serif;    /* Standard skrifttype */
 }
 
-/* Wrapper der sikrer footer i bunden */
+/* Wrapper der sikrer at footer altid er i bunden */
 .side-wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;           /* Fylder mindst hele skærmhøjden */
+    display: flex;               /* Bruger flexbox */
+    flex-direction: column;      /* Indhold stables lodret */
 }
 
-/* Gør main-indhold fleksibelt */
+/* Gør main-indhold fleksibelt så footer skubbes ned */
 .side-indhold {
-    flex: 1;
+    flex: 1;                     /* Fylder den resterende plads */
 }
 
-/* ===== HERO ===== */
+/* ===== HERO SEKTION ===== */
+/* Overordnet layout for hero-sektionerne */
 .hero-sektion {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 80px 120px;
+    display: flex;                           /* Lægger indhold ved siden af hinanden */
+    justify-content: space-between;          /* Maks afstand mellem elementer */
+    align-items: flex-start;                 /* Justerer elementer øverst */
+    padding: 80px 120px;                     /* Indvendig afstand */
 }
 
-/* Venstre tekstområde */
+/* Venstre kolonne med tekst */
 .venstre-kolonne {
-    max-width: 500px;
+    max-width: 500px;            /* Maks bredde på tekst */
 }
 
-/* Overskrifter */
+/* Overskrifter i hero */
 .forside-overskrifter {
     display: flex;
-    flex-direction: column;
-    color: #4f1313;
-    line-height: 1.1;
+    flex-direction: column;      /* Overskrifter under hinanden */
+    color: #4f1313;              /* Mørkerød farve */
+    line-height: 1.1;            /* Mindre afstand mellem linjer */
     margin-bottom: 20px;
 }
 
+/* Første overskriftslinje */
 .overskrift-linje-1 {
     font-size: 56px;
     font-weight: bold;
 }
 
+/* Anden overskriftslinje */
 .overskrift-linje-2 {
     font-size: 45px;
-    font-style: italic;
-    margin-left: 220px;
+    font-style: italic;          /* Kursiv tekst */
+    margin-left: 220px;          /* Skubber teksten mod højre */
 }
 
-/* Brødtekst */
+/* Brødtekst under overskriften */
 .forside-tekst {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.6;            /* Luft mellem linjerne */
     color: #4f1313;
 }
 
-/* CTA-knap */
+/* Call-To-Action knap */
 .læs-mere-knap {
     display: inline-block;
     padding: 12px 30px;
-    border-radius: 30px;
-    background-color: #2f3b1f;
+    border-radius: 30px;         /* Runde kanter */
+    background-color: #2f3b1f;   /* Grøn baggrund */
     color: #ffffff;
     text-decoration: underline;
     font-size: 18px;
-    margin-left: 300px;
+    margin-left: 300px;          /* Placering mod højre */
     margin-top: 30px;
 }
 
-/* ===== RESERVATION ===== */
+/* ===== RESERVATIONS FORMULAR ===== */
+/* Formularens overordnede styling */
 .reservations-formular {
     width: 500px;
-    margin: 60px auto;
+    margin: 60px auto;           /* Centrerer formularen */
     display: flex;
     flex-direction: column;
 }
 
+/* Titel over formularen */
 .reservations-titel {
     font-size: 42px;
     color: #5E0005;
@@ -95,27 +103,29 @@ body {
     margin-bottom: 30px;
 }
 
-/* Input-wrapper */
+/* Wrapper omkring hvert inputfelt */
 .input-wrapper {
     background-color: #D2C1B7;
     border: 3px solid #5E0005;
-    border-radius: 50px;
+    border-radius: 50px;         /* Meget runde kanter */
     padding: 22px 30px;
     margin-bottom: 28px;
-    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Skygge */
     display: flex;
     align-items: center;
 }
 
+/* Selve input-feltet */
 .input-wrapper input {
-    width: 100%;
-    border: none;
-    background: transparent;
+    width: 100%;                 /* Fylder hele wrapperen */
+    border: none;                /* Ingen kant */
+    background: transparent;     /* Gennemsigtig baggrund */
     font-size: 18px;
     color: #5E0005;
-    outline: none;
+    outline: none;               /* Fjerner blå outline */
 }
 
+/* Placeholder-tekst */
 .input-wrapper input::placeholder {
     color: #5E0005;
 }
@@ -123,7 +133,7 @@ body {
 /* Submit-knap */
 .send-knap {
     display: block;
-    margin: 40px auto 0;
+    margin: 40px auto 0;         /* Centreret */
     background-color: #2F3824;
     color: white;
     font-size: 18px;
@@ -135,30 +145,41 @@ body {
 }
 
 /* ===== FOOTER ===== */
+/* Footer-baggrund og spacing */
 .side-footer {
     background-color: #ffffff;
     padding: 20px 0;
+    margin-top: 60px;
 }
 
+/* Footer-indhold */
 .footer-indhold {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #000;
 }
 
-/* Sociale medier */
-.sociale-medier {
-    display: flex;
-    gap: 15px;
+/* Cookie-knap */
+.cookie-box {
+    background-color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-/* ===== RESET ===== */
-/* Fjerner browserens standard margin og padding */
+
+/* Sociale medier-ikoner */
+.sociale-medier {
+    display: flex;
+    gap: 15px;                   /* Afstand mellem ikoner */
+}
+
+/* ===== EKSTRA RESET ===== */
+/* Fjerner evt. ekstra margin/padding */
 html, body {
     margin: 0;
     padding: 0;
@@ -170,10 +191,10 @@ nav.navbar {
 }
 
 /* ===== CSS VARIABLER ===== */
-/* Bruges til ensartede farver */
-:root{
+/* Gør det nemt at genbruge farver */
+:root {
     --bg: #ffffff;
-    --accent: #4f1313;   /* primær farve */
+    --accent: #4f1313;   /* Primær farve */
     --muted: #777777;
     --line: #dcd6d3;
     --cart: #666;
@@ -190,7 +211,7 @@ nav.navbar {
     box-sizing: border-box;
 }
 
-/* Container i navbar – opdelt i logo, menu og kurv */
+/* Container i navbar */
 .navbar .container {
     display: flex;
     align-items: center;
@@ -200,7 +221,7 @@ nav.navbar {
 }
 
 /* ===== LOGO ===== */
-/* Styling af logo/branding */
+/* Styling af logoet */
 .navbar-brand {
     flex: 0 0 auto;
     font-family: "Pacifico", cursive;
@@ -212,7 +233,7 @@ nav.navbar {
 }
 
 /* ===== MENU ===== */
-/* Selve menulisten */
+/* Selve menuen */
 .navbar-nav {
     display: flex;
     flex: 1 1 auto;
@@ -237,13 +258,13 @@ nav.navbar {
     transition: color .15s ease;
 }
 
-/* Hover + aktiv tilstand */
+/* Aktivt link og hover */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     color: var(--accent);
 }
 
-/* Understregning ved hover/aktiv */
+/* Understregning under aktiv/hover */
 .navbar-nav .nav-link.active::after,
 .navbar-nav .nav-link:hover::after {
     content: "";
@@ -261,7 +282,7 @@ nav.navbar {
     cursor: pointer;
 }
 
-/* Dropdown-menu styling */
+/* Dropdown-menu */
 .navbar-nav .dropdown-menu {
     position: absolute;
     left: 50%;
@@ -277,7 +298,7 @@ nav.navbar {
     z-index: 40;
 }
 
-/* Vis dropdown ved hover */
+/* Viser dropdown når man holder musen over */
 .navbar-nav .dropdown:hover > .dropdown-menu {
     display: block;
 }
