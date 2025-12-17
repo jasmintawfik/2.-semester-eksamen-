@@ -156,3 +156,137 @@ body {
     display: flex;
     gap: 15px;
 }
+
+/* ===== RESET ===== */
+/* Fjerner browserens standard margin og padding */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sørger for at navbar altid er hvid */
+nav.navbar {
+    background: #fff;
+}
+
+/* ===== CSS VARIABLER ===== */
+/* Bruges til ensartede farver */
+:root{
+    --bg: #ffffff;
+    --accent: #4f1313;   /* primær farve */
+    --muted: #777777;
+    --line: #dcd6d3;
+    --cart: #666;
+}
+
+/* ===== NAVBAR ===== */
+/* Overordnet navbar styling */
+.navbar {
+    background: var(--bg);
+    border-top: 9px solid transparent;
+    border-bottom: 1px solid var(--line);
+    padding: 18px 28px;
+    font-family: "Merriweather", serif;
+    box-sizing: border-box;
+}
+
+/* Container i navbar – opdelt i logo, menu og kurv */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+/* ===== LOGO ===== */
+/* Styling af logo/branding */
+.navbar-brand {
+    flex: 0 0 auto;
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+
+/* ===== MENU ===== */
+/* Selve menulisten */
+.navbar-nav {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hvert menupunkt */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+/* Links i menuen */
+.navbar-nav .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 6px 8px;
+    transition: color .15s ease;
+}
+
+/* Hover + aktiv tilstand */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--accent);
+}
+
+/* Understregning ved hover/aktiv */
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 52%;
+    background: var(--accent);
+    margin: 6px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== DROPDOWN ===== */
+/* Dropdown container */
+.navbar-nav .dropdown {
+    cursor: pointer;
+}
+
+/* Dropdown-menu styling */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% + 12px);
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(20,20,20,0.06);
+    padding: 8px 0;
+    min-width: 180px;
+    display: none;
+    border-radius: 6px;
+    z-index: 40;
+}
+
+/* Vis dropdown ved hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Links i dropdown */
+.navbar-nav .dropdown-menu a {
+    display: block;
+    padding: 8px 18px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
