@@ -1,46 +1,74 @@
 <!DOCTYPE html>
+<!-- Fortæller browseren, at dokumentet er HTML5 -->
 <html lang="da">
+<!-- Starter HTML-dokumentet og angiver sproget som dansk -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Gør at danske bogstaver (æ, ø, å) vises korrekt -->
+
     <title>Our Place – Brætspilscafé</title>
+    <!-- Titel der vises i browserens fane -->
 
-
+    <!-- Forbinder din egen CSS-fil -->
     <link rel="stylesheet" href="forside.css">
+
+    <!-- Henter Google-fonten "Open Sans" -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<!-- Alt indhold, som brugeren kan se på siden -->
 
 <div class="side-wrapper">
+    <!-- Wrapper der samler hele siden (bruges ofte til layout og styling) -->
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION / MENU -->
     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+        <!-- Navigationen øverst på siden -->
+
         <div class="container">
+            <!-- Container der holder navigationens indhold samlet -->
+
             <a class="navbar-brand fs-3 fw-semibold" href="#">
+                <!-- Logo / navn på siden -->
                 Our Place – Brætspilscafé
             </a>
 
             <div class="collapse navbar-collapse">
+                <!-- Samler alle menupunkterne -->
+
                 <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Liste med menupunkter -->
+
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Vores brætspilscafé</a>
+                        <!-- Aktiv menu -->
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">Fødselsdage, firmaevents mm.</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="menukort.html">Vores menukort</a>
+                        <!-- Link til en anden side -->
                     </li>
+
                     <li class="nav-item dropdown">
+                        <!-- Dropdown-menu -->
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             Vis mere
                         </a>
+
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Galleri</a></li>
                             <li><a class="dropdown-item" href="#">Kontakt</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item ms-3">
+                        <!-- Ekstra afstand til venstre -->
                         <a class="nav-link" href="#">Indkøbskurv</a>
                     </li>
                 </ul>
@@ -50,67 +78,85 @@
 
     <!-- HOVEDINDHOLD -->
     <main class="side-indhold">
+        <!-- Det primære indhold på siden -->
 
-        <!-- HERO 1 -->
+        <!-- HERO SEKTION 1 -->
         <section class="hero-sektion">
+            <!-- Stor introduktionssektion -->
 
             <div class="venstre-kolonne">
+                <!-- Venstre side med tekst -->
+
                 <div class="forside-overskrifter">
                     <div class="overskrift-linje-1">Julearrangement</div>
                     <div class="overskrift-linje-2">for seniorer</div>
                 </div>
 
                 <div class="forside-tekst">
+                    <!-- Beskrivende tekst -->
                     <p>
                         Kom i ægte julestemning med gløgg, varme æbleskiver og hyggeligt samvær,
                         som er særligt skabt til seniorer.
                     </p>
+
                     <p>
                         Vi glæder os til at byde jer velkommen til en stemningsfuld
                         juleoplevelse med brætspil!
                     </p>
                 </div>
 
+                <!-- Knap der linker til informationsside -->
                 <a href="information.html" class="læs-mere-knap">Læs mere her</a>
             </div>
 
             <div class="billeder-højreside">
+                <!-- Billede til højre -->
                 <img src="Herobillede.png" alt="Seniorer der spiller">
             </div>
 
         </section>
 
-        <!-- HERO 2 / RESERVATION -->
+        <!-- HERO SEKTION 2 / RESERVATION -->
         <section class="hero-sektion">
+            <!-- Sektion med billede og formular -->
 
             <div class="hyggebillede">
+                <!-- Illustration/billede -->
                 <img src="Spil.svg" alt="Hygge">
             </div>
 
+            <!-- Reservationsformular -->
             <form action="send.php" method="POST" class="reservations-formular">
+                <!-- Formular der sender data til send.php -->
 
                 <h1 class="reservations-titel">Tilmeld dig her</h1>
 
+                <!-- Input: navn -->
                 <div class="input-wrapper">
                     <input type="text" name="name" placeholder="Fulde navn" required>
                 </div>
 
+                <!-- Input: antal personer -->
                 <div class="input-wrapper">
                     <input type="number" name="persons" placeholder="Antal personer" required>
                 </div>
 
+                <!-- Input: dato og tidspunkt -->
                 <div class="input-wrapper">
                     <input type="datetime-local" name="datetime" required>
                 </div>
 
+                <!-- Input: telefonnummer -->
                 <div class="input-wrapper">
                     <input type="tel" name="phone" placeholder="Telefon nr" required>
                 </div>
 
+                <!-- Input: e-mail -->
                 <div class="input-wrapper">
                     <input type="email" name="email" placeholder="E-mail adresse" required>
                 </div>
 
+                <!-- Send-knap -->
                 <button type="submit" class="send-knap">Reservér</button>
             </form>
 
@@ -120,12 +166,17 @@
 
     <!-- FOOTER -->
     <footer class="side-footer">
+        <!-- Nederste del af siden -->
+
         <div class="footer-indhold">
+            <!-- Footerens indhold -->
+
             <span>© 2023 Alle rettigheder forbeholdes</span>
 
             <div class="cookie-box">Cookies</div>
 
             <div class="sociale-medier">
+                <!-- Sociale medier ikoner -->
                 <img src="Instagram.svg" alt="Instagram">
                 <img src="Facebook.svg" alt="Facebook">
             </div>
@@ -134,6 +185,8 @@
 
 </div>
 
+<!-- JavaScript-fil -->
 <script type="module" src="app.js"></script>
 </body>
 </html>
+

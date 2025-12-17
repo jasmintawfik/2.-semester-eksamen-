@@ -1,42 +1,71 @@
 <!DOCTYPE html>
+<!-- Fortæller browseren, at dokumentet er HTML5 -->
 <html lang="da">
+<!-- Starter HTML-dokumentet og angiver sproget som dansk -->
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Gør at danske tegn (æ, ø, å) vises korrekt -->
 
+    <title>Title</title>
+    <!-- Titel der vises i browserens fane -->
+
+    <!-- Forbinder CSS-filen til denne side -->
     <link rel="stylesheet" href="information.css">
+
+    <!-- Importerer Google-fonten Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<!-- Alt synligt indhold på siden -->
 
+<!-- NAVIGATION -->
 <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+    <!-- Øverste navigationsmenu -->
+
     <div class="container">
+        <!-- Holder navigationens indhold samlet -->
+
         <a class="navbar-brand fs-3 fw-semibold" href="#">
+            <!-- Logo / navn på siden -->
             Our Place – Brætspilscafé
         </a>
 
         <div class="collapse navbar-collapse">
+            <!-- Samler alle menupunkter -->
+
             <ul class="navbar-nav ms-auto align-items-center">
+                <!-- Liste med navigationslinks -->
+
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Vores brætspilscafé</a>
+                    <!-- Aktiv side -->
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Fødselsdage, firmaevents mm.</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="menukort.html">Vores menukort</a>
+                    <!-- Link til menukort -->
                 </li>
+
                 <li class="nav-item dropdown">
+                    <!-- Dropdown-menu -->
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         Vis mere
                     </a>
+
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Galleri</a></li>
                         <li><a class="dropdown-item" href="#">Kontakt</a></li>
                     </ul>
                 </li>
+
                 <li class="nav-item ms-3">
+                    <!-- Indkøbskurv -->
                     <a class="nav-link" href="#">Indkøbskurv</a>
                 </li>
             </ul>
@@ -44,17 +73,24 @@
     </div>
 </nav>
 
-<!-- Tilbage-link -->
+<!-- TILBAGE-LINK -->
 <div class="tilbage">
+    <!-- Link der sender brugeren tilbage til forsiden -->
     <a href="forside.html"><- Tilbage til forsiden</a>
 </div>
 
+<!-- INFORMATIONSSEKTION -->
 <section class="informations-side">
+    <!-- Overordnet sektion for sidens indhold -->
+
     <div class="indhold">
+        <!-- Wrapper der holder tekst og billede -->
 
         <div class="tekst-område">
+            <!-- Venstre side med tekst -->
 
             <h1 class="side-overskrift">December hos Our Place</h1>
+            <!-- Sidens hovedoverskrift -->
 
             <p class="brødtekst">
                 Hos Our Place inviterer vi dig indenfor til hyggelige decemberdage,
@@ -80,8 +116,10 @@
 
         </div>
 
+        <!-- Højre side med billede -->
         <div class="billede-højre">
             <div class="juletræ">
+                <!-- Julebillede -->
                 <img src="Billede2.png" alt="Juletræ og nisse">
             </div>
         </div>
@@ -89,39 +127,57 @@
     </div>
 </section>
 
-<button class="åbn-menukort-knap" onclick="openMenu()">Se menukort</button>
+<!-- KNAP DER ÅBNER MENUKORT -->
+<button class="åbn-menukort-knap" onclick="openMenu()">
+    Se menukort
+</button>
 
+<!-- MODAL (POP-UP) -->
 <div class="modal-overlay" id="menuModal">
+    <!-- Overlay der dækker skærmen -->
+
     <div class="modal-boks">
+        <!-- Selve boksen med indhold -->
+
+        <!-- Indlejrer menukort-siden -->
         <iframe src="menukort.html" width="100%" height="500"></iframe>
+
+        <!-- Luk-knap -->
         <button onclick="closeMenu()">Luk</button>
     </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="side-footer">
+    <!-- Nederste del af siden -->
+
     <div class="footer-indhold">
         <span>© 2023 Alle rettigheder forbeholdes</span>
+
         <div class="cookie-box">Cookies</div>
+
         <div class="sociale-medier">
+            <!-- Sociale medier ikoner -->
             <img src="Instagram.svg" alt="Instagram">
             <img src="Facebook.svg" alt="Facebook">
         </div>
     </div>
 </footer>
 
-<!-- ⚠️ DIT SCRIPT – UÆNDRET -->
+<!-- JAVASCRIPT -->
 <script>
-    // Viser modal ved at ændre display til flex
+    // Viser modal-vinduet ved at ændre display til flex
     function openMenu() {
         document.getElementById("menuModal").style.display = "flex";
     }
 
-    // Skjuler modal igen
+    // Skjuler modal-vinduet igen
     function closeMenu() {
         document.getElementById("menuModal").style.display = "none";
     }
 </script>
 
+<!-- Eksternt JavaScript-modul -->
 <script type="module" src="app.js"></script>
 
 </body>

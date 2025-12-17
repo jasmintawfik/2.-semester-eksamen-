@@ -1,35 +1,35 @@
 /* ===== GENEREL BAGGRUND OG FONT ===== */
-/* Baggrund på hele siden + fontvalg */
+/* Gælder for hele siden */
 body{
-    background-color: #D2C1B7;
-    font-family: "Open Sans";
+    background-color: #D2C1B7;        /* Lys brun/beige baggrund */
+    font-family: "Open Sans";         /* Standard skrifttype */
 }
 
 /* ===== OVERSKRIFT ===== */
-/* Styling af hovedoverskrift */
+/* Styling af hovedoverskriften på informationssiden */
 .side-overskrift{
-    color: #4f1313;
-    font-size: 54px;
-    font-weight: bold;
-    margin-left: 120px;
-    margin-top: 90px;
+    color: #4f1313;                   /* Mørkerød farve */
+    font-size: 54px;                  /* Stor tekst */
+    font-weight: bold;                /* Fed skrift */
+    margin-left: 120px;               /* Skubber teksten ind fra venstre */
+    margin-top: 90px;                 /* Luft over overskriften */
 }
 
 /* ===== BRØDTEKST ===== */
 /* Almindelig paragraf-tekst */
 .brødtekst {
-    font-size: 18px;
-    line-height: 1.6;   /* gør teksten mere luftig og læsbar */
-    font-weight: 400;   /* normal teksttykkelse */
-    margin-bottom: 20px;
-    text-align: left;
-    margin-left: 120px;
-    color: #4f1313;
+    font-size: 18px;                  /* Standard læsevenlig størrelse */
+    line-height: 1.6;                 /* Gør teksten mere luftig */
+    font-weight: 400;                 /* Normal teksttykkelse */
+    margin-bottom: 20px;              /* Luft under hvert afsnit */
+    text-align: left;                 /* Venstrestillet tekst */
+    margin-left: 120px;               /* Samme indrykning som overskriften */
+    color: #4f1313;                   /* Samme farve som overskrift */
 }
 
-/* Fed tekst (hvis brugt) */
+/* Fed tekst (hvis klassen bruges i HTML) */
 .fed-tekst{
-    font-weight: bolder;
+    font-weight: bolder;              /* Ekstra fed tekst */
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -40,44 +40,44 @@ body{
 }
 
 /* ===== LAYOUT FOR INFORMATIONSIDE ===== */
-/* Container der holder tekst og billede side om side */
+/* Wrapper der placerer tekst og billede ved siden af hinanden */
 .informations-side .indhold {
-    display: flex;          /* Flexbox-layout */
-    gap: 30px;              /* afstand mellem tekst og billede */
-    align-items: flex-start;
+    display: flex;                    /* Aktiverer flexbox */
+    gap: 30px;                        /* Afstand mellem tekst og billede */
+    align-items: flex-start;          /* Justerer indhold øverst */
 }
 
-/* Tekstblok fylder resten af pladsen */
+/* Tekstområdet fylder al ledig plads */
 .tekst-område {
-    flex: 1;
+    flex: 1;                          /* Tager resten af pladsen */
 }
 
-/* Billedeblok krymper ikke */
+/* Billedet må ikke blive mindre */
 .billede-højre {
-    flex-shrink: 0;
+    flex-shrink: 0;                   /* Forhindrer billedet i at krympe */
 }
 
 /* Styling af billedet */
 .billede-højre img {
-    width: 600px;
-    margin-right: 60px;
-    margin-top: 60px;
-    height: auto;
+    width: 600px;                     /* Fast bredde */
+    margin-right: 60px;               /* Luft til højre */
+    margin-top: 60px;                 /* Luft over billedet */
+    height: auto;                     /* Bevarer billedets proportioner */
 }
 
 /* ===== MODAL ===== */
 /* Modal-boksens indhold placeres lodret */
 .modal-boks {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;           /* Indhold under hinanden */
 }
 
 /* ===== TILBAGE-LINK ===== */
-/* Link tilbage til forsiden */
+/* Link der sender brugeren tilbage til forsiden */
 .tilbage-link {
     margin: 15px;
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: none;            /* Fjerner standard understregning */
     color: #4f1313;
 }
 
@@ -88,23 +88,23 @@ html, body {
     padding: 0;
 }
 
-/* Sørger for at navbar altid er hvid */
+/* Sørger for at navbar altid har hvid baggrund */
 nav.navbar {
     background: #fff;
 }
 
 /* ===== CSS VARIABLER ===== */
-/* Bruges til ensartede farver */
+/* Farver der kan genbruges overalt */
 :root{
-    --bg: #ffffff;
-    --accent: #4f1313;   /* primær farve */
-    --muted: #777777;
-    --line: #dcd6d3;
-    --cart: #666;
+    --bg: #ffffff;                    /* Baggrundsfarve */
+    --accent: #4f1313;                /* Primær accentfarve */
+    --muted: #777777;                 /* Nedtonet grå */
+    --line: #dcd6d3;                  /* Linje-/borderfarve */
+    --cart: #666;                     /* Farve til kurv */
 }
 
 /* ===== NAVBAR ===== */
-/* Overordnet navbar styling */
+/* Overordnet styling af navigationen */
 .navbar {
     background: var(--bg);
     border-top: 9px solid transparent;
@@ -114,7 +114,7 @@ nav.navbar {
     box-sizing: border-box;
 }
 
-/* Container i navbar – opdelt i logo, menu og kurv */
+/* Indholdet i navbaren */
 .navbar .container {
     display: flex;
     align-items: center;
@@ -124,32 +124,32 @@ nav.navbar {
 }
 
 /* ===== LOGO ===== */
-/* Styling af logo/branding */
+/* Styling af logo/brand-navn */
 .navbar-brand {
     flex: 0 0 auto;
     font-family: "Pacifico", cursive;
     font-size: 40px;
     color: var(--accent);
     text-decoration: none;
-    white-space: nowrap;
+    white-space: nowrap;              /* Forhindrer linjeskift */
     font-weight: bolder;
 }
 
 /* ===== MENU ===== */
-/* Selve menulisten */
+/* Selve menu-listen */
 .navbar-nav {
     display: flex;
     flex: 1 1 auto;
     justify-content: center;
     gap: 40px;
-    list-style: none;
+    list-style: none;                 /* Fjerner bullets */
     margin: 0;
     padding: 0;
 }
 
 /* Hvert menupunkt */
 .navbar-nav .nav-item {
-    position: relative;
+    position: relative;               /* Bruges til dropdown */
 }
 
 /* Links i menuen */
@@ -158,10 +158,10 @@ nav.navbar {
     color: #333;
     font-size: 18px;
     padding: 6px 8px;
-    transition: color .15s ease;
+    transition: color .15s ease;      /* Blød farveovergang */
 }
 
-/* Hover + aktiv tilstand */
+/* Hover og aktiv tilstand */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
     color: var(--accent);
@@ -180,12 +180,12 @@ nav.navbar {
 }
 
 /* ===== DROPDOWN ===== */
-/* Dropdown container */
+/* Dropdown-område */
 .navbar-nav .dropdown {
     cursor: pointer;
 }
 
-/* Dropdown-menu styling */
+/* Selve dropdown-menuen */
 .navbar-nav .dropdown-menu {
     position: absolute;
     left: 50%;
@@ -196,17 +196,17 @@ nav.navbar {
     box-shadow: 0 6px 18px rgba(20,20,20,0.06);
     padding: 8px 0;
     min-width: 180px;
-    display: none;
+    display: none;                    /* Skjult som standard */
     border-radius: 6px;
     z-index: 40;
 }
 
-/* Vis dropdown ved hover */
+/* Viser dropdown når musen holdes over */
 .navbar-nav .dropdown:hover > .dropdown-menu {
     display: block;
 }
 
-/* Links i dropdown */
+/* Links inde i dropdown */
 .navbar-nav .dropdown-menu a {
     display: block;
     padding: 8px 18px;
@@ -216,14 +216,14 @@ nav.navbar {
 }
 
 /* ===== FOOTER ===== */
-/* Footer-baggrund og spacing */
+/* Footerens baggrund og afstand */
 .side-footer {
     background-color: #ffffff;
     padding: 20px 0;
     margin-top: 60px;
 }
 
-/* Footer-indhold */
+/* Indhold i footer */
 .footer-indhold {
     display: flex;
     flex-direction: column;
@@ -242,17 +242,16 @@ nav.navbar {
     font-size: 14px;
 }
 
-
 /* ===== MODAL OVERLAY ===== */
-/* Mørk baggrund bag modal */
+/* Mørk gennemsigtig baggrund */
 .modal-overlay {
     position: fixed;
-    inset: 0;
+    inset: 0;                         /* Fylder hele skærmen */
     background: rgba(0,0,0,0.4);
-    display: none;
+    display: none;                    /* Skjult som standard */
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 9999;                    /* Ligger øverst */
 }
 
 /* Modal fylder hele skærmen */
@@ -270,7 +269,7 @@ nav.navbar {
 }
 
 /* ===== ÅBN MENUKORT-KNAP ===== */
-/* Styling af knappen der åbner modal */
+/* Knappen der åbner modal-vinduet */
 .åbn-menukort-knap{
     display: flex;
     justify-content: flex-end;
