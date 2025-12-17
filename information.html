@@ -1,129 +1,87 @@
 <!DOCTYPE html>
-<!-- Angiver dokumenttypen som HTML5 -->
-<html lang="en">
+<html lang="da">
 <head>
-    <!-- Sørger for korrekt visning af tegn (æ, ø, å osv.) -->
     <meta charset="UTF-8">
-
-
-    <!-- Titel der vises i browser-fanen -->
     <title>Title</title>
 
-    <!-- Link til eksternt stylesheet -->
     <link rel="stylesheet" href="information.css">
-
-    <!-- Google Font: Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Navigation lavet med Bootstrap-klasser -->
 <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
     <div class="container">
-
-        <!-- Logo / branding -->
         <a class="navbar-brand fs-3 fw-semibold" href="#">
             Our Place – Brætspilscafé
         </a>
 
-        <!-- Navigationens menupunkter -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto align-items-center">
-
-                <!-- Aktiv side -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
-                        Vores brætspilscafé
-                    </a>
+                    <a class="nav-link active" href="#">Vores brætspilscafé</a>
                 </li>
-
-                <!-- Link til events -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        Fødselsdage, firmaevents mm.
-                    </a>
+                    <a class="nav-link" href="#">Fødselsdage, firmaevents mm.</a>
                 </li>
-
-                <!-- Link til menukort -->
                 <li class="nav-item">
-                    <a class="nav-link" href="menukort.html">
-                        Vores menukort
-                    </a>
+                    <a class="nav-link" href="menukort.html">Vores menukort</a>
                 </li>
-
-                <!-- Dropdown-menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         Vis mere
                     </a>
-
-                    <!-- Dropdown-indhold -->
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Galleri</a></li>
                         <li><a class="dropdown-item" href="#">Kontakt</a></li>
                     </ul>
                 </li>
-
-                <!-- Indkøbskurv -->
                 <li class="nav-item ms-3">
-                    <a class="nav-link" href="#">
-                        Indkøbskurv
-                    </a>
+                    <a class="nav-link" href="#">Indkøbskurv</a>
                 </li>
-
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Tilbage-link til forsiden -->
+<!-- Tilbage-link -->
 <div class="tilbage">
     <a href="forside.html"><- Tilbage til forsiden</a>
 </div>
 
-<!-- Informationssektion -->
-<section class="informationside">
-    <div class="content">
+<section class="informations-side">
+    <div class="indhold">
 
-        <!-- Tekstindhold til venstre -->
-        <div class="info">
+        <div class="tekst-område">
 
-            <!-- Overskrift -->
-            <h1 class="overskrift">
-                December hos Our Place
-            </h1>
+            <h1 class="side-overskrift">December hos Our Place</h1>
 
-            <!-- Brødtekst -->
-            <p class="paragraph">
+            <p class="brødtekst">
                 Hos Our Place inviterer vi dig indenfor til hyggelige decemberdage,
                 hvor vi samles om det, der betyder noget: fællesskab, hygge og glæde.
             </p>
 
-            <p class="paragraph">
+            <p class="brødtekst">
                 I december åbner vi dørene for dig, der har lyst til at mødes i et roligt
-                og nostalgisk rum – og vi byder især varmt velkommen til seniorer, som har lyst
-                til at være en del af fællesskabet.
+                og nostalgisk rum – og vi byder især varmt velkommen til seniorer.
             </p>
 
-            <p class="paragraph">
-                Our Place er et sted, hvor vi gerne vil være sammen med dig, og hvor du kan være dig selv.
+            <p class="brødtekst">
+                Our Place er et sted, hvor vi gerne vil være sammen med dig.
             </p>
 
-            <p class="paragraph">
-                Vi har åbent hver fredag i december fra kl. 15–18 på:
-                Munkebro 1, 4000 Roskilde.
+            <p class="brødtekst">
+                Vi har åbent hver fredag i december fra kl. 15–18.
             </p>
 
-            <p class="paragraph">
+            <p class="brødtekst">
                 Vi glæder os til at se dig.
             </p>
 
         </div>
 
-        <!-- Billede til højre -->
-        <div class="billedejuletræ-højreside">
-            <div class="Juletræ">
+        <div class="billede-højre">
+            <div class="juletræ">
                 <img src="Billede2.png" alt="Juletræ og nisse">
             </div>
         </div>
@@ -131,44 +89,27 @@
     </div>
 </section>
 
-<!-- Knap der åbner modal -->
-<button class="open-menu-btn" onclick="openMenu()">Se menukort</button>
+<button class="åbn-menukort-knap" onclick="openMenu()">Se menukort</button>
 
-<!-- Modal overlay -->
-<div class="modal" id="menuModal">
-
-    <!-- Modal-boks -->
-    <div class="modal-box">
-
-        <!-- iframe der indlæser menukort-siden -->
+<div class="modal-overlay" id="menuModal">
+    <div class="modal-boks">
         <iframe src="menukort.html" width="100%" height="500"></iframe>
-
-        <!-- Luk-knap -->
         <button onclick="closeMenu()">Luk</button>
-
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-
-        <!-- Copyright -->
+<footer class="side-footer">
+    <div class="footer-indhold">
         <span>© 2023 Alle rettigheder forbeholdes</span>
-
-        <!-- Cookie-link -->
         <div class="cookie-box">Cookies</div>
-
-        <!-- Sociale medier -->
-        <div class="Some">
+        <div class="sociale-medier">
             <img src="Instagram.svg" alt="Instagram">
             <img src="Facebook.svg" alt="Facebook">
         </div>
-
     </div>
 </footer>
 
-<!-- JavaScript til modal -->
+<!-- ⚠️ DIT SCRIPT – UÆNDRET -->
 <script>
     // Viser modal ved at ændre display til flex
     function openMenu() {
@@ -181,7 +122,6 @@
     }
 </script>
 
-<!-- Eksternt JavaScript (ES module) -->
 <script type="module" src="app.js"></script>
 
 </body>
