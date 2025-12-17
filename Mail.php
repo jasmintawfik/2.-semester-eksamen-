@@ -1,9 +1,12 @@
 <?php
+// Starter PHP-scriptet
 
 // Tjekker om formularen er sendt med POST-metoden
+// Det sikrer, at siden kun kører koden, når formularen er indsendt
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // Henter og sikrer brugerens input mod HTML-injektion
+    // Henter data fra formularen og beskytter mod HTML-injektion
+    // htmlspecialchars() forhindrer, at brugeren kan indsætte HTML eller scripts
     $name = htmlspecialchars($_POST['name']);
     $persons = htmlspecialchars($_POST['persons']);
     $datetime = htmlspecialchars($_POST['datetime']);
@@ -11,12 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = htmlspecialchars($_POST['email']);
 
     // Modtagerens e-mailadresse
+    // Her skal caféens e-mail stå
     $to = "dinmail@domæne.dk";
 
-    // Emne på mailen
+    // Emnet på e-mailen
     $subject = "Ny reservation";
 
-    // Selve mail-indholdet (brugerens oplysninger)
+    // Selve indholdet af e-mailen
+    // Indeholder alle oplysninger fra formularen
     $message = "
 Ny reservation:
 
@@ -28,12 +33,17 @@ E-mail: $email
 ";
 
     // Header der angiver afsenderens e-mail
+    // Gør at mailen ser ud til at komme fra brugerens e-mail
     $headers = "From: $email";
 
-    // Sender mailen
+    // Sender e-mailen
+    // mail(modtager, emne, besked, headers)
     mail($to, $subject, $message, $headers);
 
-    // Omdirigerer brugeren til en tak-side efter afsendelse
+    // Omdirigerer brugeren til en tak-side
+    // Dette sker efter mailen er sendt
     header("Location: tak.html");
-    exit; // Stopper scriptet helt
+
+    // Stopper scriptet helt, så der ikke køres mere kode
+    exit;
 }

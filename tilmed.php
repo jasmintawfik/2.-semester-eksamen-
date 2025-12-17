@@ -8,3 +8,5 @@ echo '<a href="kontakt.php">Kontakt</a>';
 // Udskriver et link til informations-siden
 echo '<a href="information.php">Information</a>';
 ?>
+
+
