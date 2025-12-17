@@ -1,77 +1,84 @@
-/* Wrapper der indeholder både baggrundsbillede og menuboks */
+/* ===== WRAPPER TIL MENUKORT ===== */
+/* Indeholder både baggrundsbillede og menuboks */
 .beholder {
-    position: relative;     /* gør det muligt at placere billede absolut */
-    padding: 20px;          /* kant så baggrundsbilledet kan ses */
-    border-radius: 5px;
-    overflow: hidden;       /* klipper hjørnerne */
-    height: 810px;
-    width: 500px;
+    position: relative;         /* Gør det muligt at placere børn absolut */
+    padding: 20px;              /* Luft så baggrundsbilledet kan ses i kanten */
+    border-radius: 5px;         /* Let afrundede hjørner */
+    overflow: hidden;           /* Klipper indhold der går udenfor hjørnerne */
+    height: 810px;              /* Fast højde på wrapperen */
+    width: 500px;               /* Fast bredde på wrapperen */
 }
 
-/* Grundfont på siden */
+/* ===== GENEREL FONT ===== */
+/* Standard skrifttype for hele siden */
 body{
     font-family: "Open Sans";
 }
 
-/* Baggrundsbillede – ligger bag teksten */
+/* ===== BAGGRUNDSBILLEDE ===== */
+/* Ligger bag teksten og fylder hele wrapperen */
 .baggrundsbillede {
     position: absolute;
-    inset: 0;               /* fylder hele wrapperen */
+    inset: 0;                   /* Top, højre, bund og venstre = 0 */
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* beskærer billedet pænt */
-    z-index: 0;             /* ligger nederst */
+    object-fit: cover;          /* Billedet beskæres pænt */
+    z-index: 0;                 /* Ligger nederst i lagene */
 }
 
-/* Den lyse boks ovenpå baggrundsbilledet */
+/* ===== MENUBOKS ===== */
+/* Den lyse boks oven på baggrundsbilledet */
 .menu-box {
     position: relative;
-    background: #D2C1B7;
-    border-radius: 12px;
-    padding: 28px;
+    background: #D2C1B7;        /* Lys baggrund */
+    border-radius: 12px;        /* Bløde hjørner */
+    padding: 28px;              /* Luft inde i boksen */
     height: 755px;
     width: 440px;
-    z-index: 1;             /* gør at boksen ligger over billedet */
+    z-index: 1;                 /* Sørger for at boksen ligger over billedet */
 }
 
-/* Grå baggrund bag hele menukortet */
+/* ===== BAGGRUND TIL HELE MENUKORTET ===== */
+/* Grå område bag hele menukortet */
 .baggrund {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #C6C7C6;
-    backdrop-filter: blur(3px); /* slører baggrunden */
+    justify-content: center;    /* Centrerer indhold vandret */
+    align-items: center;        /* Centrerer indhold lodret */
+    background: #C6C7C6;        /* Grå baggrund */
+    backdrop-filter: blur(3px); /* Slører baggrunden bag elementet */
     z-index: 999;
-    padding: 100px;
+    padding: 100px;             /* Luft omkring menukortet */
     border-radius: 20px;
     width: 70%;
     margin-left: 40px;
 }
 
-/* Lille titel (Jule) */
+/* ===== TITLER ===== */
+/* Lille titel (fx "Jule") */
 .lille-title {
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 40px;
-    line-height: 0.9;
+    line-height: 0.9;           /* Mindsker afstand mellem linjer */
     color: #5c0f0f;
     display: block;
     text-align: center;
     margin-right: 100px;
 }
 
-/* Stor titel (Menukort) */
+/* Stor titel (fx "Menukort") */
 .stor-title {
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 35px;
     color: #5c0f0f;
     text-align: center;
-    margin-top: -10px;
+    margin-top: -10px;          /* Trækker teksten lidt op */
     margin-left: 150px;
 }
 
-/* Overskrifter for sektioner */
+/* ===== SEKTIONSTITLER ===== */
+/* Overskrifter for Snacks og Drikkevarer */
 .sektion-title {
     text-align: center;
     font-style: italic;
@@ -80,24 +87,24 @@ body{
     margin: 30px 0 10px;
 }
 
-/* Hvert menupunkt (navn + pris) */
+/* ===== MENU-PUNKTER ===== */
+/* Wrapper for hvert menupunkt (navn + pris) */
 .menu-punkt{
-    display: flex;                  /* navn og pris på samme linje */
+    display: flex;              /* Navn og pris på samme linje */
     justify-content: space-between;
     padding: 16px 0;
-    border-bottom: 2px solid rgba(0,0,0,0.25);
+    border-bottom: 2px solid rgba(0,0,0,0.25); /* Streg under hvert punkt */
     font-size: 20px;
 }
 
-
-/* Navn på menu-item */
+/* Navn på menu-element */
 .menu-punkt .navn {
     color: #6a1f1f;
     text-decoration: underline;
-    text-underline-offset: 6px;
+    text-underline-offset: 6px; /* Afstand mellem tekst og understregning */
 }
 
-/* Pris på menu-item */
+/* Pris på menu-element */
 .menu-punkt .pris {
     color: #444;
     font-style: italic;

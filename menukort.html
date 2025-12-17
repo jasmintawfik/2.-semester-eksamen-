@@ -1,67 +1,87 @@
 <!DOCTYPE html>
 <!-- Angiver dokumenttypen som HTML5 -->
 <html lang="da">
+<!-- Starter HTML-dokumentet og angiver sproget som dansk -->
+
 <head>
-    <!-- Korrekt tegnsæt (æ, ø, å) -->
+    <!-- Korrekt tegnsætning, så æ, ø og å vises rigtigt -->
     <meta charset="UTF-8">
 
-    <!-- Titel i browser-fanen -->
+    <!-- Titel der vises i browser-fanen -->
     <title>Menukort</title>
 
-    <!-- Link til CSS-filen for menukort -->
+    <!-- Forbinder CSS-filen, der styler menukortet -->
     <link rel="stylesheet" href="menukort.css">
 
-    <!-- Google Font: Open Sans -->
+    <!-- Importerer Google-fonten Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<!-- Alt indhold som brugeren kan se -->
 
-<!-- Tilbage-navigation -->
+<!-- TILBAGE-NAVIGATION -->
 <div class="navigationvenstre">
+    <!-- Link tilbage til forsiden -->
     <a href="forside.html"><- Tilbage til forsiden</a>
 </div>
 
-<!-- Main-indhold (semantisk HTML) -->
+<!-- MAIN-INDHOLD -->
+<!-- main bruges som semantisk HTML for sidens primære indhold -->
 <main class="baggrund">
 
-    <!--  som holder baggrundsbillede og menu-boks -->
+    <!-- Sektion der indeholder både baggrundsbillede og menukort -->
     <section class="beholder">
 
-        <!-- Baggrundsbillede (ligger bag boksen via CSS) -->
+        <!-- Baggrundsbillede -->
+        <!-- Ligger bag menuboksen og styles via CSS -->
         <img src="baggrundsbilede.png" class="baggrundsbillede" alt="baggrund">
 
-        <!-- Selve menukort-boksen -->
+        <!-- MENUKORT-BOKS -->
+        <!-- Selve boksen der indeholder alle menu-elementer -->
         <article class="menu-box">
 
-            <!-- Titelområde -->
+            <!-- TITEL-OMRÅDE -->
+            <!-- Header der viser menukortets titel -->
             <header class="tekst-center">
                 <span class="lille-title">Jule</span>
+                <!-- Lille titeltekst -->
+
                 <span class="stor-title">Menukort</span>
+                <!-- Stor titeltekst -->
             </header>
 
-            <!-- Snacks-sektion -->
+            <!-- SNACKS-SEKTION -->
             <section>
+                <!-- Overskrift for snacks -->
                 <h2 class="sektion-title">Snacks</h2>
 
-                <!-- Liste med menu-items -->
+                <!-- Liste med snacks -->
                 <ul>
+                    <!-- Enkelt menupunkt -->
                     <li class="menu-punkt">
                         <span class="navn">3 stk. æbleskiver</span>
+                        <!-- Navn på produkt -->
+
                         <span class="pris">30,-</span>
+                        <!-- Pris -->
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Skål med vaniljekranse</span>
                         <span class="pris">20,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Honninghjerte</span>
                         <span class="pris">30,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Julekonfekt</span>
                         <span class="pris">15,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Brændte mandler</span>
                         <span class="pris">15,-</span>
@@ -69,27 +89,33 @@
                 </ul>
             </section>
 
-            <!-- Drikkevarer-sektion -->
+            <!-- DRIKKEVARER-SEKTION -->
             <section>
+                <!-- Overskrift for drikkevarer -->
                 <h2 class="sektion-title">Drikkevarer</h2>
 
+                <!-- Liste med drikkevarer -->
                 <ul>
                     <li class="menu-punkt">
                         <span class="navn">Gløgg</span>
                         <span class="pris">20,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Alkoholfri gløgg</span>
                         <span class="pris">20,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">En flaske kildevand</span>
                         <span class="pris">10,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Sodavand 33 cl.</span>
                         <span class="pris">15,-</span>
                     </li>
+
                     <li class="menu-punkt">
                         <span class="navn">Kaffe/The</span>
                         <span class="pris">25,-</span>
@@ -104,3 +130,4 @@
 
 </body>
 </html>
+
