@@ -1,5 +1,5 @@
 /* Wrapper der indeholder både baggrundsbillede og menuboks */
-.wrapper {
+.beholder {
     position: relative;     /* gør det muligt at placere billede absolut */
     padding: 20px;          /* kant så baggrundsbilledet kan ses */
     border-radius: 5px;
@@ -24,7 +24,7 @@ body{
 }
 
 /* Den lyse boks ovenpå baggrundsbilledet */
-.box {
+.menu-box {
     position: relative;
     background: #D2C1B7;
     border-radius: 12px;
@@ -35,7 +35,7 @@ body{
 }
 
 /* Grå baggrund bag hele menukortet */
-.backdrop {
+.baggrund {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@ body{
 }
 
 /* Lille titel (Jule) */
-.title-small {
+.lille-title {
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 40px;
@@ -61,7 +61,7 @@ body{
 }
 
 /* Stor titel (Menukort) */
-.title-big {
+.stor-title {
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 35px;
@@ -72,7 +72,7 @@ body{
 }
 
 /* Overskrifter for sektioner */
-.section-title {
+.sektion-title {
     text-align: center;
     font-style: italic;
     color: #3d4a3d;
@@ -81,7 +81,7 @@ body{
 }
 
 /* Hvert menupunkt (navn + pris) */
-.menu-item {
+.menu-punkt{
     display: flex;                  /* navn og pris på samme linje */
     justify-content: space-between;
     padding: 16px 0;
@@ -89,20 +89,16 @@ body{
     font-size: 20px;
 }
 
-/* Fjerner stregen på sidste punkt */
-.menu-item:last-of-type {
-    border-bottom: none;
-}
 
 /* Navn på menu-item */
-.menu-item .name {
+.menu-punkt .navn {
     color: #6a1f1f;
     text-decoration: underline;
     text-underline-offset: 6px;
 }
 
 /* Pris på menu-item */
-.menu-item .price {
+.menu-punkt .pris {
     color: #444;
     font-style: italic;
 }
